@@ -15,7 +15,7 @@ Nullable!Color color = Color.fromName("blue");
 ## Color by hex string
 
 ```d
-Nullable!Color color = Color.fromHex("#dddddd");
+Nullable!Color color = Color.fromHexString("#dddddd");
 ```
 
 ## Color by RGB
@@ -35,11 +35,11 @@ TODO
 
 TODO
 
-## Color to Hex
+## Color to HexString
 
 ```d
 auto color = Color.fromName("blue");
-writeln(color.get.hex);
+writeln(color.get.hexString);
 ```
 
 ## Color to RGB
@@ -58,7 +58,7 @@ TODO
 ## Color to name
 
 ```d
-auto color = Color.fromHex("#000000");
+auto color = Color.fromHexString("#000000");
 writeln(color.get.name);
 ```
 

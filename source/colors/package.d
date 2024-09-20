@@ -42,7 +42,7 @@ struct Color
         return color;
     }
 
-    static Nullable!Color fromHex(string name)
+    static Nullable!Color fromHexString(string name)
     {
         auto h = name.strip("#");
         Color color;
@@ -140,7 +140,7 @@ struct Color
         return Color.init;
     }
 
-    string hex()
+    string hexString()
     {
         auto rgbColor = this.rgb;
         return "#" ~ r.to!string(16) ~ g.to!string(16) ~ b.to!string(16) ~ a.to!string(16);
@@ -161,7 +161,7 @@ struct Color
         }
 
         // Name not found, return the hex name
-        return this.hex;
+        return this.hexString;
     }
 }
 
@@ -174,12 +174,12 @@ unittest
     assert(color.get.b == 0);
     assert(color.get.a == 255);
 
-    auto color2 = Color.fromHex("#dddddd");
+    auto color2 = Color.fromHexString("#dddddd");
     assert(!color2.isNull);
     assert(color2.get.r == 221);
     assert(color2.get.g == 221);
     assert(color2.get.b == 221);
     assert(color2.get.a == 255);
 
-    assert(Color.fromRGB(221, 221, 221).get.hex == "#DDDDDDFF");
+    assert(Color.fromRGB(221, 221, 221).get.hexString == "#DDDDDDFF");
 }
