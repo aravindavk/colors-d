@@ -1,0 +1,16 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/colors
+colors.so
+colors.dylib
+colors.dll
+colors.a
+colors.lib
+colors-test-*
+*.exe
+*.pdb
+*.o
+*.obj
+*.lst

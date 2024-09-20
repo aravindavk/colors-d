@@ -1,0 +1,6 @@
+name "colors"
+description "Color utilities"
+authors "Aravinda VK <mail@aravindavk.in>"
+copyright "Copyright © 2024, Aravinda VK <mail@aravindavk.in>"
+license "MIT"
+targetType "library"
